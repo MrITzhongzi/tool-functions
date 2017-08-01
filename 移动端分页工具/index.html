@@ -74,12 +74,12 @@
 <script src="./jquery.js"></script>
 <script src="./pagging.js"></script>
 <script>
-  var obj = {
-    template: '<p>你好</p>',
-    el: '.container ul',
+  var obj = { 
+    template: '<p>你好</p>',   //要渲染的页面结构
+    el: '.container ul',    //页面荣区，盛放要被渲染的几条狗
     refreshLength: 50, //距离底部多高刷新页面
   }
-  Pagging(obj);
+  new Pagging(obj);
 </script>
 </body>
 </html>
