@@ -74,7 +74,12 @@
 <script src="./jquery.js"></script>
 <script src="./pagging.js"></script>
 <script>
-  Pagging();
+  var obj = {
+    template: '<p>你好</p>',
+    el: '.container ul',
+    refreshLength: 50, //距离底部多高刷新页面
+  }
+  Pagging(obj);
 </script>
 </body>
 </html>
