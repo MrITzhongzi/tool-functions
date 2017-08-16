@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=">
+    <title>Title</title>
+    <style>
+        html,body {
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--这里玄滩nav-->
+    </div>
+    <div id="container">
+        <!--这里是渲染nav对应的内容-->
+        <section index="0" style="flex-grow: 1; display: none;">0</section>
+        <section index="1" style="flex-grow: 1; display: none;">1</section>
+        <section index="2" style="flex-grow: 1; display: none;">2</section>
+        <section index="3" style="flex-grow: 1; display: none;">3</section>
+    </div>
+<script src="./quick.tab.js"></script>
+<script>
+    var obj = {
+        navEl: "#app",
+        contentEl: "#container",
+        navColor: "#3878bb",
+        number: 4,
+        fontSize: "16px",
+        tabName: ['桌子1','桌子2','桌子3','桌子4'],
+        height: "100px",
+        lineHeight: "100px",
+    }
+    new QuickTab(obj);
+</script>
+</body>
+</html>
