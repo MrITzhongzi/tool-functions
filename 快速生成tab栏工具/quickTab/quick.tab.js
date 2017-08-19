@@ -83,9 +83,11 @@
                 flexGrow: 1,
                 borderBottom: "2px solid transparent",
                 cursor: "pointer",
+                color: globalObj.navColor
             }
             var firstLi = {
-                "borderBottom": "2px solid " + globalObj.seletedBottomColor
+                "borderBottom": "2px solid " + globalObj.seletedBottomColor,
+                color: globalObj.selectedTextColor
             }
 
             var sectionEleCss = {
@@ -119,9 +121,15 @@
             lis.forEach(function (li) {
                 li.onclick = function () {
                     lis.forEach(function (li) {
-                        that.setCss(li,{borderBottom:"2px solid transparent"})
+                        that.setCss(li,{
+                            borderBottom:"2px solid transparent",
+                            color: globalObj.navColor
+                        })
                     })
-                    that.setCss(this,{borderBottom: "2px solid " + globalObj.seletedBottomColor})
+                    that.setCss(this,{
+                        borderBottom: "2px solid " + globalObj.seletedBottomColor,
+                        color: globalObj.selectedTextColor
+                    })
                     var liIndex = this.getAttribute("index")
 
                     sections.forEach(function (section) {

@@ -7,15 +7,17 @@
             </div>
             <div id="container">
                 <!--这里是渲染nav对应的内容-->
-                <section index="0" style="flex-grow: 1; display: none;">0</section>
-                <section index="1" style="flex-grow: 1; display: none;">1</section>
-                <section index="2" style="flex-grow: 1; display: none;">2</section>
-                <section index="3" style="flex-grow: 1; display: none;">3</section>
+                <section index="0" data-sign="quick-tab" style="flex-grow: 1; display: none;">0</section>
+                <section index="1" data-sign="quick-tab" style="flex-grow: 1; display: none;">1</section>
+                <section index="2" data-sign="quick-tab" style="flex-grow: 1; display: none;">2</section>
+                <section index="3" data-sign="quick-tab" style="flex-grow: 1; display: none;">3</section>
             </div>
+            注意： 在这个结构中  data-sign="quick-tab" 属性是必须的，为了让 插件可以找到这个容器
     3、新建一个对象： new QuickTab(obj);
         其中  var obj = {
                     navEl: "#app",
                     navBgc:"#fff",
+                    navTextColor: "#666666",
                     contentEl: "#container",
                     contentHeight: "70vh",
                     navColor: "#3878bb",
@@ -24,7 +26,8 @@
                     tabName: ['桌子1','桌子2','桌子3','桌子4'],
                     height: "100px",
                     lineHeight: "100px",
-                    seletedBottomColor: "#0096ff"
+                    seletedBottomColor: "#0096ff",
+                    selectedTextColot: "#0096ff"
               }
 
 
@@ -33,6 +36,7 @@
 
     navEl  是tab栏的容器，传入id选择器
     navBgc 导航栏的背景色
+    navTextColor nav字体的初始颜色
     contentEl 是每个tab栏对应的内容的容器，传入id选择器
     contentHeight:  盛放内容容器的高度
     navColor 是tab栏的字体颜色
@@ -42,4 +46,15 @@
     height: 是控制tab栏的高度
     lineHeight: 控制tab栏的行高
     seletedBottomColor 被选中的 nav 标签 的地步下划线颜色
+    selectedTextColot nav选中标签内部文字的颜色
 
+    注意： 
+            <div id="container">
+                <!--这里是渲染nav对应的内容-->
+                <section index="0" data-sign="quick-tab"  style="flex-grow: 1; display: none;">0</section>
+                <section index="1" data-sign="quick-tab"   style="flex-grow: 1; display: none;">1</section>
+                <section index="2" data-sign="quick-tab" style="flex-grow: 1; display: none;">2</section>
+                <section index="3" data-sign="quick-tab" style="flex-grow: 1; display: none;">3</section>
+            </div>
+
+        在这个结构中  data-sign="quick-tab" 属性是必须的，为了让 插件可以找到这个容器

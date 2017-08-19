@@ -17,16 +17,17 @@
     </div>
     <div id="container">
         <!--这里是渲染nav对应的内容-->
-        <section index="0" style="flex-grow: 1; display: none;">0</section>
-        <section index="1" style="flex-grow: 1; display: none;">1</section>
-        <section index="2" style="flex-grow: 1; display: none;">2</section>
-        <section index="3" style="flex-grow: 1; display: none;">3</section>
+        <section index="0" data-sign="quick-tab" style="flex-grow: 1; display: none;">0</section>
+        <section index="1" data-sign="quick-tab" style="flex-grow: 1; display: none;">1</section>
+        <section index="2" data-sign="quick-tab" style="flex-grow: 1; display: none;">2</section>
+        <section index="3" data-sign="quick-tab" style="flex-grow: 1; display: none;">3</section>
     </div>
 <script src="./quick.tab.js"></script>
 <script>
     var obj = {
         navEl: "#app",
         navBgc:"#fff",
+        navTextColor: "#666666",
         contentEl: "#container",
         contentHeight: "70vh",
         navColor: "#3878bb",
@@ -35,7 +36,8 @@
         tabName: ['桌子1','桌子2','桌子3','桌子4'],
         height: "100px",
         lineHeight: "100px",
-        seletedBottomColor: "#0096ff"
+        seletedBottomColor: "#0096ff",
+        selectedTextColot: "#0096ff"
     }
     new QuickTab(obj);
 
