@@ -26,15 +26,20 @@
 <script>
     var obj = {
         navEl: "#app",
+        navBgc:"#fff",
         contentEl: "#container",
+        contentHeight: "70vh",
         navColor: "#3878bb",
         number: 4,
         fontSize: "16px",
         tabName: ['桌子1','桌子2','桌子3','桌子4'],
         height: "100px",
         lineHeight: "100px",
+        seletedBottomColor: "#0096ff"
     }
     new QuickTab(obj);
+    var contentHeight = document.body.clientHeight - 95
+
 </script>
 </body>
 </html>

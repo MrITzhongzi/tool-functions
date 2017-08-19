@@ -28,7 +28,7 @@
             globalObj = Object.assign({},requireObj)
             globalObj.navEl  = document.querySelector(requireObj.navEl)
             globalObj.contentEl = document.querySelector(requireObj.contentEl)
-            globalObj.conSections = globalObj.contentEl.querySelectorAll("section")
+            globalObj.conSections = globalObj.contentEl.querySelectorAll("section[data-sign=\"quick-tab\"]")
         },
 
         initDom: function () {
@@ -51,7 +51,7 @@
             var contentBox = globalObj.contentEl
             var ulEle = container.querySelector('ul')
             var lis = container.querySelectorAll('li')
-            var sectionEle = contentBox.querySelectorAll('section');
+            var sectionEle = contentBox.querySelectorAll('section[data-sign="quick-tab"]');
             var ulHeight = globalObj.height
 
             var containerCss = {
@@ -60,11 +60,12 @@
                 display: "flex",
                 flexDirection: "column",
                 color: globalObj.navColor,
-                fontSize: globalObj.fontSize
+                fontSize: globalObj.fontSize,
+                backgroundColor: globalObj.navBgc
 
             }
             var contentBoxCss = {
-                flexGrow: 1
+                flexGrow: 1,
             }
             var ulEleCss = {
                 padding: 0,
@@ -81,14 +82,15 @@
                 margin: 0,
                 flexGrow: 1,
                 borderBottom: "2px solid transparent",
-                cursor: "pointer"
+                cursor: "pointer",
             }
             var firstLi = {
-                "borderBottom": "2px solid red"
+                "borderBottom": "2px solid " + globalObj.seletedBottomColor
             }
 
             var sectionEleCss = {
-                display: "none"
+                display: "none",
+                height: globalObj.contentHeight
             }
 
             this.setCss(container,containerCss)
@@ -119,7 +121,7 @@
                     lis.forEach(function (li) {
                         that.setCss(li,{borderBottom:"2px solid transparent"})
                     })
-                    that.setCss(this,{borderBottom: "2px solid red"})
+                    that.setCss(this,{borderBottom: "2px solid " + globalObj.seletedBottomColor})
                     var liIndex = this.getAttribute("index")
 
                     sections.forEach(function (section) {

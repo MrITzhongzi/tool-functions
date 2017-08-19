@@ -14,14 +14,17 @@
             </div>
     3、新建一个对象： new QuickTab(obj);
         其中  var obj = {
-                  navEl: "#app",
-                  contentEl: "#container",
-                  navColor: "#3878bb",
-                  number: 4,
-                  fontSize: "16px",
-                  tabName: ['桌子1','桌子2','桌子3','桌子4'],
-                  height: "100px",
-                  lineHeight: "100px",
+                    navEl: "#app",
+                    navBgc:"#fff",
+                    contentEl: "#container",
+                    contentHeight: "70vh",
+                    navColor: "#3878bb",
+                    number: 4,
+                    fontSize: "16px",
+                    tabName: ['桌子1','桌子2','桌子3','桌子4'],
+                    height: "100px",
+                    lineHeight: "100px",
+                    seletedBottomColor: "#0096ff"
               }
 
 
@@ -29,11 +32,14 @@
     参数配置说明：
 
     navEl  是tab栏的容器，传入id选择器
+    navBgc 导航栏的背景色
     contentEl 是每个tab栏对应的内容的容器，传入id选择器
+    contentHeight:  盛放内容容器的高度
     navColor 是tab栏的字体颜色
     number： 是有几个tab栏
     tabName： 是个数组，每一栏的名字
     fontSize: 控制的是 nav 的字体大小。
     height: 是控制tab栏的高度
     lineHeight: 控制tab栏的行高
+    seletedBottomColor 被选中的 nav 标签 的地步下划线颜色
 
