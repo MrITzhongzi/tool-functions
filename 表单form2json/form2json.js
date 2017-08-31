@@ -34,6 +34,10 @@
         var selectName = element.getAttribute('name')
         var selectVal = element.value
         reObj[selectName] = selectVal
+      } else if (element.tagName === 'TEXTAREA') {
+        var textareaName = element.getAttribute('name')
+        var textareaVal = element.value
+        reObj[textareaName] = textareaVal
       } else {
         if (element.children.length !== 0) {
           traversal(element)

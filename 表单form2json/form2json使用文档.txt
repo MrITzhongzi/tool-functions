@@ -6,6 +6,7 @@ fotm2date: 使用文档
   3、调用form2JSon方法，传入一个父盒子的id，返回一个 由input的name和value组成的 对象
         var dataObj = formObj.form2JSon('form')
 
+  注意：会统计的dom类型：  input（包括radio checkbox text）  select  textarea
   
   注释：formInterface() 对象返回的对象中的方法解析： 
     1、form2JSon 传入一个父盒子的id，返回一个 由input的name和value组成的 对象
