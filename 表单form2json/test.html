@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form2json</title>
+</head>
+<body>
+  <div id="form">
+   <div>
+      <input type="text" name="haha000">
+     <div>
+       <div>
+         <div>
+           <input type="text" name="haha">
+         </div>
+         <select name="select" id="">
+            <option value="0000">99</option>
+          </select>
+       </div>
+       <input type="text" name="haha111">
+       <input type="text" name="haha222">
+       <input type="text" name="haha333">
+     </div>
+   </div>
+   <select name="wwww" id="">
+     <option value="0">请选择</option>
+     <option value="1">22</option>
+     <option value="2">22</option>
+     <option value="3">22</option>
+     <option value="4">22</option>  
+   </select>
+   <input type="radio" value="1" name="sex">
+   <input type="radio" value="2" name="sex" checked>
+   <input type="checkbox" value="1" name="sex1">
+   <input type="checkbox" value="2" name="sex1" checked>
+   <input type="checkbox" value="4" name="sex1">
+   <input type="checkbox" value="6" name="sex1" checked>
+  </div>
+  <input type="checkbox" value="1" name="sex">
+  <input type="checkbox" value="2" name="sex" checked>
+  <button>生成</button>
+</body>
+<script src="./dist/main.min.js"></script>
+<script>
+  var btn = document.querySelector('button')
+  
+  btn.onclick = function(){
+    var formObj = formInterface()
+    var dataObj = formObj.form2JSon('form')
+    console.log(JSON.stringify(dataObj))
+  }
+</script>
+</html>
