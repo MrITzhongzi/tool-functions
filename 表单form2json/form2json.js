@@ -26,9 +26,7 @@
         } else if (element.type === 'checkbox') {
           dealCheckbox(element)
         } else {
-          var name = element.getAttribute('name')
-          var value = element.value
-          reObj[name] = value
+          isEmpty(element)
         }
       } else if (element.tagName === 'SELECT') {
         var selectName = element.getAttribute('name')
@@ -64,6 +62,17 @@
       }
     }
     reObj[checkName] = checkArr
+  }
+  /**
+   * 如果 input = text 是空值的话就过滤掉
+   * @param {*} element 
+   */
+  function isEmpty (element) {
+    var name = element.getAttribute('name')
+    var value = element.value
+    if (value) {
+      reObj[name] = value
+    }
   }
   function returnData () {
     return reObj
