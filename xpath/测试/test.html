@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        .con {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="con"></div>
+    </div>
+
+    <script>
+        var boxELe = document.querySelector('.box')
+        var conEle = document.querySelector('.con')
+
+        // boxELe.onmouseover = function(){
+        //     console.log('big  mouseover')
+        // }
+        // boxELe.onmouseout = function(){
+        //     console.log('big mouseout')
+        // }
+
+        boxELe.onmouseenter = function(){
+            console.log('mouse enter')
+        }
+
+        boxELe.onmouseleave = function(){
+            console.log('mouse leave')
+        }
+
+        
+    </script>
+</body>
+</html>
