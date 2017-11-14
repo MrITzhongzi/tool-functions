@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1:nth-child(1) {
+            height: 400px;
+            background-color: red;
+        }
+        .div1:nth-child(2) {
+            height: 400px;
+            background-color: rgb(0, 153, 255);
+        }
+        .div1:nth-child(3) {
+            height: 400px;
+            background-color: rgb(68, 0, 255);
+        }
+        .div1:nth-child(4) {
+            height: 400px;
+            background-color: rgb(255, 238, 0);
+        }
+        .div1:nth-child(5) {
+            height: 400px;
+            background-color: rgb(226, 38, 38);
+        }
+        .div1:nth-child(6) {
+            height: 400px;
+            background-color: rgb(174, 0, 255);
+        }
+        .div1:nth-child(7) {
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>hha</h4>
+    <script src="./lihw.js"> </script>
+    <script>
+        document.onkeydown = function(e){
+            console.log(lihw.keyCodeMap.getKeyName(e.keyCode))
+        }
+        var h4Ele = document.querySelector('h4')
+        h4Ele.style.color = lihw.Random.ranColor()
+
+        console.log(lihw.Random.ranNum(1,100))
+
+
+        console.log(lihw.Str.digitUppercase(1000))
+
+        var dateTime = new Date()
+        console.log(dateTime)
+
+        setTimeout(function(){
+            console.log(lihw.Time.formatRemainTime("11:26:40"))
+        },20000)
+
+        
+    </script>
+</body>
+
+</html>
