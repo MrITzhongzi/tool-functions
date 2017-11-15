@@ -57,7 +57,7 @@
 	}
 	// 通过xpath或者上次查询结果获取元素
 	XPath.prototype.getElements = function(xpath){
-		console.log(xpath)
+		
 		var nodes, elements = [];
 		nodes = document.evaluate(xpath || this.thisPath, document, null, XPathResult.ANY_TYPE, null);
 		
@@ -95,6 +95,7 @@
 			this.similarPath += tmp;
 
 		}.bind(this));
+		// console.log(this.similarPath)	
 		return this.getElements(this.similarPath);
 	}
 	global._xpath = new XPath();
